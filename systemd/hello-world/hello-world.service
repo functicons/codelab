@@ -1,0 +1,8 @@
+[Unit]
+Description=Hello World Service
+After=systend-user-sessions.service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/weidagang/hello-world.sh
+SyslogIdentifier=HelloWorldService

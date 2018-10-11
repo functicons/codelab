@@ -1,0 +1,18 @@
+This is a hello world example for creating a systemd service.
+
+Usage:
+
+$ make install
+
+$ make start
+
+$ make status
+
+$ make logs
+
+$ make stop
+
+$ make uninstall
+
+References:
+* [Systemd Services 101](https://gist.github.com/leommoore/ea74061dc3bb086f36d42666a6153e0c)
