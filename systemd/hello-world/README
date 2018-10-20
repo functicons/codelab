@@ -1,17 +1,12 @@
-This is a hello world example for creating a systemd service.
+A hello world systemd service.
 
 Usage:
 
 $ make install
-
 $ make start
-
 $ make status
-
 $ make logs
-
 $ make stop
-
 $ make uninstall
 
 References:
