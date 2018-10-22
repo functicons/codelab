@@ -1,0 +1,22 @@
+This example demonstrates how to shade guava:11.0 introduced by hadooop-yarn-client:2.9.0.
+
+yarn-app
+  -> guava:20.0
+  -> hadoop-yarn-client:2.9.0
+       -> guava:11.0
+
+Project hadoop-yarn-client-shaded is a wrapper for hadoop-yarn-client, which creates a uber jar
+hadoop-yarn-client-shaded-1.0-SNAPSHOT.jar with com.google.com (of Guava 11.0) shaded as
+repackaged.com.google.com.
+
+Project yarn-app is an example YARN application which depends on
+hadoop-yarn-client-shaded:1.0-SNAPSHOT and Guava 20.0.
+
+Run the example with:
+
+$ mvn clean package install
+$ mvn dependency:tree -Dverbose -Dincludes=com.google.guava
+
+References:
+[1]: https://maven.apache.org/plugins/maven-shade-plugin/examples/class-relocation.html
+[2]: https://bryantsai.com/how-to-resolve-dependency-conflict-out-of-your-control-e75ace79e54f
